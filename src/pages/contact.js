@@ -15,7 +15,9 @@ class Contact extends React.Component {
       <div>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <Menu />
-        <BaseLayout title="Contact">Form will be here</BaseLayout>
+        <BaseLayout title="Contact">
+          <p>Form will be here</p>
+        </BaseLayout>
       </div>
     )
   }

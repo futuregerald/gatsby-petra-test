@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import BaseLayout from '../components/BaseLayout'
 import Menu from '../components/Menu'
+import './index.scss'
 
 class HomeIndex extends React.Component {
   render() {
