@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import BaseLayout from '../components/BaseLayout'
-import Menu from '../components/Menu'
 import './index.scss'
 
 class HomeIndex extends React.Component {
@@ -15,7 +14,6 @@ class HomeIndex extends React.Component {
     return (
       <div>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        <Menu />
         <BaseLayout title="Hi">
           <p>
             I'm Petra, I design stuff.<br />

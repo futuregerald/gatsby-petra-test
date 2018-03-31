@@ -1,18 +1,21 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Menu from '../components/Menu'
+import Logo from '../components/Logo'
+
+import './index.scss'
 
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
     let header = (
-      <h1>
-        <Link to={'/'} >
-          PV
-        </Link>
-      </h1>
+      <div className="Header">
+        <Logo />
+        <Menu />
+      </div>
     );
     return (
-      <div>
+      <div className="Template">
         {header}
         {children()}
       </div>

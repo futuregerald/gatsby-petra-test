@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="219px" viewBox="0 0 248 219" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.1054 169.5107 0.1054 169.5107 218.2254 0 218.2254"></polygon>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1">
+            <polygon id="Fill-1" fill="#FB9597" points="215.955 0.0003 143.686 185.5243 100.391 74.3813 69.156 74.3813 127.416 219.0003 158.702 219.0003 247.554 0.0003"></polygon>
+            <g id="Group-7">
+                <g id="Group-4">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-3"></g>
+                    <path d="M125.8867,110.8794 C135.8587,102.6754 140.8437,90.5764 140.8437,74.5784 C140.8437,58.9984 135.8587,47.2104 125.8867,39.2114 C115.9147,31.2164 101.5817,27.2144 82.8857,27.2144 L29.9137,27.5264 L29.9137,123.1874 L82.8857,123.1874 C101.5817,123.1874 115.9147,119.0874 125.8867,110.8794 M147.2317,19.4244 C162.0807,32.3074 169.5107,50.3794 169.5107,73.6434 C169.5107,97.9474 162.0327,116.7994 147.0747,130.1984 C132.1177,143.5974 111.1347,150.2964 84.1317,150.2964 L29.9137,150.2964 L29.9137,218.2254 L-0.0003,218.2254 L-0.0003,0.1054 L84.1317,0.1054 C111.3437,0.1054 132.3767,6.5464 147.2317,19.4244" id="Fill-2" fill="#169D50" mask="url(#mask-2)"></path>
+                </g>
+                <polygon id="Fill-5" fill="#FB9597" points="112.5205 105.7734 71.3165 0.0004 39.3805 0.0004 81.9925 105.7734"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

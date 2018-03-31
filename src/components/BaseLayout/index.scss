@@ -1,0 +1,48 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.BaseLayout {
+  // border: 1px solid blue;
+  // font-family: 'Oswald', cursive;
+  // font-family: 'Enriqueta', cursive;
+  font-weight: 400;
+  position: relative;
+  margin-top: -$base-spacing * 15;
+  @include desktop {
+    margin-top: -$base-spacing * 30;
+  }
+
+  & > h1 {
+    text-align: center;
+    margin-bottom: $base-spacing * 4;
+    text-transform: uppercase;
+  }
+
+  & > p {
+    font-size: 1.4rem;
+    text-align: center;
+    @include mobile {
+      font-size: 2.2rem;
+      // border: 1px solid green;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    &:before {
+      content: '';
+      height: 3px;
+      width: 100%;
+      background: $pink;
+      position: absolute;
+      bottom: 0.2rem;
+      left: 0;
+      z-index: -1;
+    }
+    &:hover {
+      color: $pink;
+    }
+  }
+}

@@ -3,8 +3,8 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import BaseLayout from '../components/BaseLayout'
-import Menu from '../components/Menu'
+import BaseLayout from '../../components/BaseLayout'
+import Menu from '../../components/Menu'
 
 class Contact extends React.Component {
   render() {
@@ -12,9 +12,8 @@ class Contact extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <div>
+      <div className="Contact">
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        <Menu />
         <BaseLayout title="Contact">
           <p>Form will be here</p>
         </BaseLayout>

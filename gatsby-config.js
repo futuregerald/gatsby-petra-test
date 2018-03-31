@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Petra Venturini",
+    title: "Petra Venturini portfolio",
     author: "Petra Venturini",
   },
   plugins: [
@@ -35,14 +35,23 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
+    //{
+      //resolve: `gatsby-plugin-google-analytics`,
+      //options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+      //},
+    //},
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Oswald:400`,
+          `Enriqueta:400` // you can also specify font weights and styles
+        ]
+      }
+    }
   ],
 }

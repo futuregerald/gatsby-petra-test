@@ -1,10 +1,30 @@
+@import '../styles/reset';
 @import '../styles/vars';
+@import '../styles/mixins';
 
 // Globals
-body {
+html {
   background: $off-white;
+  font-family: $body;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li {
+html, body {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title;
+  color: $green;
+}
+
+h1 {
+  font-size: 5em;
+
+  @include mobile {
+    font-size: 8rem;
+  }
+ }
+
+p, a, li {
   color: $green;
 }

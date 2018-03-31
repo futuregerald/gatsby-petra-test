@@ -2,6 +2,7 @@
 title: Project two
 date: "2015-05-28T22:40:32.169Z"
 path: "/project-two/"
+layout: 'layout2'
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia

@@ -2,9 +2,12 @@
 title: Project one
 date: "2015-05-01T22:12:03.284Z"
 path: "/project-one/"
+layout: "layout1"
 ---
 
 This is my first post on my new fake blog! How exciting!
+
+<section class="thisSection">123</section>
 
 I'm sure I'll write a lot more interesting things in the future.
 
