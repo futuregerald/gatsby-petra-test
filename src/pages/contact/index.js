@@ -14,15 +14,9 @@ class Contact extends React.Component {
         <BaseLayout title="Contact">
           <form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="contact-form" value="contact" />
-            <label>Name:
-              <input type="text" name="name" />
-            </label>
-            <label>Email:
-              <input type="email" name="email" />
-            </label>
-            <label>Message:
-              <textarea name="message"></textarea>
-            </label>
+            <input placeholder="Your name here..." type="text" name="name" />
+            <input placeholder="Your email here..." type="email" name="email" />
+            <textarea placeholder="Your message here..." name="message"></textarea>
             <div netlify-recaptcha></div>
             <button type="submit">Send</button>
           </form>
