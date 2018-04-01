@@ -6,6 +6,9 @@ import Helmet from 'react-helmet'
 import BaseLayout from '../../components/BaseLayout'
 import Menu from '../../components/Menu'
 
+import rightArrow from './right-arrow.svg'
+import './index.scss'
+
 class Contact extends React.Component {
   render() {
     return (
@@ -18,7 +21,9 @@ class Contact extends React.Component {
             <input placeholder="Your email here..." type="email" name="email" />
             <textarea placeholder="Your message here..." name="message"></textarea>
             <div netlify-recaptcha></div>
-            <button type="submit">Send</button>
+            <div>
+              <button type="submit">Send <img src={rightArrow} alt=""/></button>
+            </div>
           </form>
         </BaseLayout>
       </div>
