@@ -17,7 +17,8 @@ class HomeIndex extends React.Component {
         <BaseLayout title="Hi">
           <p>
             I'm Petra, I design stuff.<br />
-            Here are some <Link to="/portfolio">examples</Link>.
+            Some examples coming soon.
+            {/* Here are some <Link to="/portfolio">examples</Link>. */}
           </p>
         </BaseLayout>
       </div>
