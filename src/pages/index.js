@@ -15,11 +15,13 @@ class HomeIndex extends React.Component {
       <div>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <BaseLayout title="Hi">
-          <p>
-            I'm Petra, I design stuff.<br />
-            Some examples coming soon.
-            {/* Here are some <Link to="/portfolio">examples</Link>. */}
-          </p>
+          <div className="About">
+            <p>
+              I'm Petra, I design stuff.<br />
+              Some examples coming soon.
+              {/* Here are some <Link to="/portfolio">examples</Link>. */}
+            </p>
+          </div>
         </BaseLayout>
       </div>
     )

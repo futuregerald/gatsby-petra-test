@@ -28,3 +28,23 @@ h1 {
 p, a, li {
   color: $green;
 }
+
+.About {
+  position: relative;
+
+  &:before, &:after {
+    content: '';
+    background: $pink;
+    width: 60px;
+    height: 10px;
+    position: absolute;
+  }
+  &:before {
+    right: -7%;
+    top: -28%;
+  }
+  &:after {
+    left: -10%;
+    bottom: -32%;
+  }
+}
