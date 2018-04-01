@@ -20,10 +20,10 @@
 
   & > p {
     font-size: 1.4rem;
+    line-height: 150%;
     text-align: center;
     @include mobile {
       font-size: 2.2rem;
-      // border: 1px solid green;
     }
   }
 
@@ -31,6 +31,8 @@
     text-decoration: none;
     position: relative;
     z-index: 1;
+    transition: all .2s ease-in-out;
+    display: inline-block;
     &:before {
       content: '';
       height: 3px;
@@ -43,6 +45,8 @@
     }
     &:hover {
       color: $pink;
+      transform: scale(1.09);
+      background: $off-white;
     }
   }
 }
