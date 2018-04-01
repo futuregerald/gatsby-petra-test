@@ -6,12 +6,6 @@ import Helmet from 'react-helmet'
 import BaseLayout from '../../components/BaseLayout'
 import Menu from '../../components/Menu'
 
-const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
-
 class Contact extends React.Component {
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value});
@@ -22,7 +16,7 @@ class Contact extends React.Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "contact": "contact", ...this.state })
+      body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -34,56 +28,55 @@ class Contact extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
-    return (
-      <div className="Contact">
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        <BaseLayout title="Contact">
-          <p>Form will be here</p>
-          <form onSubmit={this.handleSubmit}>
-            <input type="hidden" name="form-name" value="contact" />
-            <label style={{display: 'none'}}>honeypot<input name="bot-field" /></label>
-            <label>Name:
-              <input type="text" name="name" onChange={this.handleChange} />
-            </label>
-            <label>Email:
-              <input type="email" name="email" onChange={this.handleChange} />
-            </label>
-            <label>Message:
-              <textarea name="message" onChange={this.handleChange}></textarea>
-            </label>
-            <button type="submit">Send</button>
-          </form>
-        </BaseLayout>
-      </div>
-    )
     // return (
     //   <div className="Contact">
     //     <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
     //     <BaseLayout title="Contact">
     //       <p>Form will be here</p>
-    //       <form
-    //         name="contact"
-    //         netlify-honeypot="bot-field"
-    //         method="post"
-    //         action="/thank-you"
-    //         data-netlify="true"
-    //         // onSubmit={this.handleSubmit}
-    //       >
+    //       <form name="contact" netlify-honeypot="bot-field" method="POST" action="thank-you" netlify onSubmit={this.handleSubmit}>
     //         <label style={{display: 'none'}}>honeypot<input name="bot-field" /></label>
     //         <label>Name:
-    //           <input type="text" name="name" />
+    //           <input type="text" name="name" onChange={this.handleChange} />
     //         </label>
     //         <label>Email:
-    //           <input type="email" name="email" />
+    //           <input type="email" name="email" onChange={this.handleChange} />
     //         </label>
     //         <label>Message:
-    //           <textarea name="message"></textarea>
+    //           <textarea name="message" onChange={this.handleChange}></textarea>
     //         </label>
     //         <button type="submit">Send</button>
     //       </form>
     //     </BaseLayout>
     //   </div>
     // )
+    return (
+      <div className="Contact">
+        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
+        <BaseLayout title="Contact">
+          <p>Form will be here</p>
+          <form
+            name="contact"
+            netlify-honeypot="bot-field"
+            method="post"
+            // action="/thank-you"
+            data-netlify="true"
+            // onSubmit={this.handleSubmit}
+          >
+            <label style={{display: 'none'}}>honeypot<input name="bot-field" /></label>
+            <label>Name:
+              <input type="text" name="name" />
+            </label>
+            <label>Email:
+              <input type="email" name="email" />
+            </label>
+            <label>Message:
+              <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+          </form>
+        </BaseLayout>
+      </div>
+    )
   }
 }
 
