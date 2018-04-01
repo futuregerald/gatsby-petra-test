@@ -17,7 +17,7 @@ class Menu extends React.Component {
       return <div className="menuOpened">
         <ul className="menuList">
           <li><Link onClick={this.handleClick} to="/">About</Link></li>
-          <li><Link onClick={this.handleClick} to="/portfolio">Portfolio</Link></li>
+          {/* <li><Link onClick={this.handleClick} to="/portfolio">Portfolio</Link></li> */}
           <li><Link onClick={this.handleClick} to="/contact">Contact</Link></li>
         </ul>
       </div>
