@@ -6,22 +6,23 @@ import Helmet from 'react-helmet'
 import BaseLayout from '../../components/BaseLayout'
 import Menu from '../../components/Menu'
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class Contact extends React.Component {
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value});
   }
 
   handleSubmit = e => {
-    const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
     console.log('...this.state', ...this.state);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "contact": "contact", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
