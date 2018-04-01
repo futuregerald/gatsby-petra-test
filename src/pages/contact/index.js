@@ -33,7 +33,7 @@ class Contact extends React.Component {
   // handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message } = this.state;
+    // const { name, email, message } = this.state;
     return ( //Try ajax form on master - form submission only works on production.
       <div className="Contact">
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
