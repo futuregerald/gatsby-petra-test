@@ -22,7 +22,7 @@ class Contact extends React.Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "react-form": "contact", ...this.state })
+      body: encode({ "react-form": "react-form", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -34,56 +34,56 @@ class Contact extends React.Component {
 
   render() {
     const { name, email, message } = this.state;
-    return ( //Try ajax form on master - form submission only works on production.
-      <div className="Contact">
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        <BaseLayout title="Contact">
-          <p>Form will be here</p>
-          <form name="contact-form" method="post" action="/thanks" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="contact-form" value="contact" />
-            <label>Name:
-              <input type="text" name="name" />
-            </label>
-            <label>Email:
-              <input type="email" name="name" />
-            </label>
-            <label>Message:
-              <textarea name="message"></textarea>
-            </label>
-            <div netlify-recaptcha></div>
-            <button type="submit">Send</button>
-          </form>
-        </BaseLayout>
-      </div>
-    )
-    // return ( //Trying ajax form on master - form submission only works on production.
+    // return ( //Try ajax form on master - form submission only works on production.
     //   <div className="Contact">
     //     <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
     //     <BaseLayout title="Contact">
     //       <p>Form will be here</p>
-    //       <form onSubmit={this.handleSubmit}>
-    //         <p>
-    //           <label>
-    //             Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-    //           </label>
-    //         </p>
-    //         <p>
-    //           <label>
-    //             Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-    //           </label>
-    //         </p>
-    //         <p>
-    //           <label>
-    //             Message: <textarea name="message" value={message} onChange={this.handleChange} />
-    //           </label>
-    //         </p>
-    //         <p>
-    //           <button type="submit">Send</button>
-    //         </p>
+    //       <form name="contact-form" method="post" action="/thanks" data-netlify="true" data-netlify-honeypot="bot-field">
+    //         <input type="hidden" name="contact-form" value="contact" />
+    //         <label>Name:
+    //           <input type="text" name="name" />
+    //         </label>
+    //         <label>Email:
+    //           <input type="email" name="name" />
+    //         </label>
+    //         <label>Message:
+    //           <textarea name="message"></textarea>
+    //         </label>
+    //         <div netlify-recaptcha></div>
+    //         <button type="submit">Send</button>
     //       </form>
     //     </BaseLayout>
     //   </div>
     // )
+    return ( //Trying ajax form on master - form submission only works on production.
+      <div className="Contact">
+        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
+        <BaseLayout title="Contact">
+          <p>Form will be here</p>
+          <form onSubmit={this.handleSubmit}>
+            <p>
+              <label>
+                Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <label>
+                Message: <textarea name="message" value={message} onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
+        </BaseLayout>
+      </div>
+    )
   }
 }
 
