@@ -16,20 +16,6 @@ class Contact extends React.Component {
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <BaseLayout title="Contact">
           <p>Form will be here</p>
-          <form name="contact" method="POST" netlify>
-            <p>
-              <label>Your Name: <input type="text" name="name"></label>
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email"></label>
-                </p>
-                <p>
-                  <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
         </BaseLayout>
       </div>
     )
