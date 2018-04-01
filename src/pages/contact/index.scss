@@ -1,0 +1,77 @@
+@import '../../styles/vars';
+
+.Contact {
+  position: relative;
+
+  &:before, &:after {
+    content: '';
+    background: $pink;
+    width: 60px;
+    height: 10px;
+    position: absolute;
+  }
+  &:before {
+    right: -7%;
+    top: -4%;
+  }
+  &:after {
+    left: -10%;
+    bottom: 1%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input, textarea {
+    background: rgba($pink, 0.3);
+    margin-bottom: $base-spacing * 2;
+    padding: $base-spacing * 2;
+    font-size: 1.2rem;
+    color: $green;
+    font-family: $body;
+  }
+
+  textarea {
+    min-height: $base-spacing *25;
+  }
+
+  button {
+    margin-bottom: $base-spacing * 2;
+    padding: $base-spacing * 2;
+    font-size: 1.2rem;
+    color: $green;
+    font-family: $body;
+    float: right;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    position: relative;
+    &:before {
+      content: '';
+      transition: all 0.3s;
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background: $pink;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    img {
+      transition: all 0.3s;
+    }
+    &:hover {
+      // background: $pink;
+      transform: scale(1.1);
+      &:before {
+        width: 100%;
+      }
+      img {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+    }
+  }
+}
