@@ -15,7 +15,11 @@ class Contact extends React.Component {
       <div className="Contact">
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <BaseLayout title="Contact">
-          <form name="contact-petra3" method="post" action="thanks" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form name="contact-petra4" method="post" action="thanks" data-netlify="true" data-netlify-honeypot="bot-field">
+
+          <p style={{display: 'none'}}>
+            <label>Don’t fill this out if you are human: <input name="bot-field" /></label>
+          </p>
             <input type="hidden" name="contact-form" value="contact" />
             <input placeholder="Your name here..." type="text" name="name" />
             <input placeholder="Your email here..." type="email" name="email" />
