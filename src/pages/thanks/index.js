@@ -37,7 +37,7 @@ class Thanks extends React.Component {
       <div className="Thanks">
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <BaseLayout title="Thanks">
-          Thanks
+          <p>Thanks for getting in touch,<br />I'll get back to you soon.</p>
         </BaseLayout>
       </div>
     )
