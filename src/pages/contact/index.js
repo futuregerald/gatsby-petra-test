@@ -20,10 +20,11 @@ class Contact extends React.Component {
           <p style={{display: 'none'}}>
             <label>Don’t fill this out if you are human: <input name="bot-field" /></label>
           </p>
-            <input type="hidden" name="contact-form" value="contact" />
+            <input type="hidden" name="contact-petra4" value="contact" />
             <input placeholder="Your name here..." type="text" name="name" />
             <input placeholder="Your email here..." type="email" name="email" />
             <textarea placeholder="Your message here..." name="message"></textarea>
+            <div data-netlify-recaptcha></div>
             <div>
               <button type="submit">Send <img src={rightArrow} alt=""/></button>
             </div>
