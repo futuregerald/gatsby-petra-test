@@ -20,7 +20,6 @@ class Contact extends React.Component {
           <p style={{display: 'none'}}>
             <label>Don’t fill this out if you are human: <input name="bot-field" /></label>
           </p>
-            <input type="hidden" name="contact-petra6" value="contact" />
             <input placeholder="Your name here..." type="text" name="name" />
             <input placeholder="Your email here..." type="email" name="email" />
             <textarea placeholder="Your message here..." name="message"></textarea>
