@@ -15,13 +15,11 @@ class Contact extends React.Component {
       <div className="Contact">
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <BaseLayout title="Contact">
-          <form name="contact-petra6" method="post" action="/thanks" data-netlify="true">
+          <form name="contact-petra9" method="post" action="/thanks/" data-netlify="true">
             <input placeholder="Your name here..." type="text" name="name" />
             <input placeholder="Your email here..." type="email" name="email" />
             <textarea placeholder="Your message here..." name="message" />
-            <div data-netlify-recaptcha>
-              <br />
-            </div>
+            <div data-netlify-recaptcha />
             <div>
               <button type="submit">
                 Send <img src={rightArrow} alt="" />
